@@ -1,3 +1,4 @@
+// Ejercicios Variables 1, Variables 2, Variables 3
 // Variables 1
 // Declara una variable llamada myName e inicialízala con un valor
 var myName = "Juan";
