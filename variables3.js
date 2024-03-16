@@ -1,3 +1,4 @@
+// Matemáticas 3
 // Variables 3
 // Grupos de afirmaciones y variables proporcionadas
 var statement1 = "El peso de Juan es mayor que el peso de María.";
