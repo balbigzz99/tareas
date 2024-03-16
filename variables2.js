@@ -1,3 +1,4 @@
+// Matemáticas 2
 // Variables 2
 // Se proporcionan los resultados iniciales en result y result2
 var result = 3 * 5; // Resultado original
