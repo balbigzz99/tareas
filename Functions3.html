@@ -1,0 +1,48 @@
+<!DOCTYPE html> <!-- Declaración del tipo de documento HTML -->
+<html lang="en-US"> <!-- Inicio del elemento HTML con atributo de idioma en inglés (Estados Unidos) -->
+<head>
+    <meta charset="utf-8"/> <!-- Configuración de la codificación de caracteres a UTF-8 -->
+    <title>Functions: Task 3</title> <!-- Título del documento -->
+    <style>
+        p {
+            color: purple; /* Establece el color del texto de los párrafos en púrpura */
+            margin: 0.5em 0; /* Establece el margen superior e inferior de los párrafos */
+        }
+
+        * {
+            box-sizing: border-box; /* Define el modelo de caja para todos los elementos */
+        }
+    </style>
+    <link rel="stylesheet" href="../styles.css" /> <!-- Importa una hoja de estilos externa -->
+</head>
+
+<body>
+
+<section class="preview">
+
+</section>
+
+<script>
+    const names = ['Chris', 'Li Kang', 'Anne', 'Francesca', 'Mustafa', 'Tina', 'Bert', 'Jada']; // Array de nombres
+    const para = document.createElement('p'); // Crea un nuevo elemento de párrafo
+
+    // Función para generar un número aleatorio entre dos límites
+    function random(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    // Función para elegir un nombre aleatorio del array proporcionado
+    function chooseName(namesArray) {
+        const index = random(0, namesArray.length - 1); // Genera un índice aleatorio
+        return namesArray[index]; // Devuelve el nombre correspondiente al índice aleatorio
+    }
+
+    const chosenName = chooseName(names); // Llama a la función para elegir un nombre aleatorio
+    para.textContent = chosenName; // Asigna el nombre elegido al contenido de párrafo
+
+    const section = document.querySelector('section'); // Selecciona la sección con la clase "preview"
+    section.appendChild(para); // Agrega el párrafo al contenido de la sección
+</script>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8"/>
+    <title>Loops: Task 3</title>
+    <style>
+        p {
+            color: purple; /* Estilo para el color del texto del párrafo */
+            margin: 0.5em 0; /* Margen para el párrafo */
+        }
+
+        * {
+            box-sizing: border-box; /* Configuración de la caja de todos los elementos */
+        }
+    </style>
+    <link rel="stylesheet" href="../styles.css" /> <!-- Importar una hoja de estilos externa -->
+</head>
+
+<body>
+
+<section class="preview">
+
+</section>
+
+<script>
+    let i = 500; // Variable que sirve como contador para el bucle
+    const para = document.createElement('p'); // Crear un nuevo elemento de párrafo
+
+    // Función que verifica si un número es primo
+    function isPrime(num) {
+        for(let i = 2; i < num; i++) {
+            if(num % i === 0) {
+                return false; // Si el número es divisible por algún otro número que no sea él mismo o 1, no es primo
+            }
+        }
+        return true; // Si el número no es divisible por ningún otro número, es primo
+    }
+
+    // Bucle while que recorre los números desde 500 hasta 2
+    while (i >= 2) {
+        if (isPrime(i)) {
+            para.textContent += `${i}, `; // Agrega el número primo al contenido de texto del párrafo
+        }
+        i--; // Decrementa el contador para pasar al siguiente número
+    }
+
+    // Agregar el párrafo al elemento de sección en el documento HTML
+    const section = document.querySelector('section');
+    section.appendChild(para);
+</script>
+
+</body>
+</html>

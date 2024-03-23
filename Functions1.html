@@ -1,0 +1,45 @@
+<!DOCTYPE html> <!-- Declaración del tipo de documento HTML -->
+<html lang="en-US"> <!-- Inicio del elemento HTML con atributo de idioma en inglés (Estados Unidos) -->
+<head>
+    <meta charset="utf-8"/> <!-- Configuración de la codificación de caracteres a UTF-8 -->
+    <title>Functions: Task 1</title> <!-- Título del documento -->
+    <style>
+        p {
+            color: purple; /* Establece el color del texto de los párrafos en púrpura */
+            margin: 0.5em 0; /* Establece el margen superior e inferior de los párrafos */
+        }
+
+        * {
+            box-sizing: border-box; /* Define el modelo de caja para todos los elementos */
+        }
+    </style>
+    <link rel="stylesheet" href="../styles.css" /> <!-- Importa una hoja de estilos externa -->
+</head>
+
+<body>
+
+<section class="preview"> <!-- Sección destinada a la vista previa -->
+
+</section>
+
+<script>
+    const names = ['Chris', 'Li Kang', 'Anne', 'Francesca', 'Mustafa', 'Tina', 'Bert', 'Jada']; // Array de nombres
+    const para = document.createElement('p'); // Crea un elemento de párrafo (p)
+
+    // Función para elegir un nombre aleatorio del array y mostrarlo en el párrafo
+    function chooseName() {
+        const randomIndex = Math.floor(Math.random() * names.length); // Genera un índice aleatorio
+        const randomName = names[randomIndex]; // Obtiene un nombre aleatorio del array
+        para.textContent = `Random name: ${randomName}`; // Establece el texto del párrafo con el nombre aleatorio
+    }
+
+    chooseName(); // Llama a la función para mostrar un nombre aleatorio una vez
+
+    // Don't edit the code below here!
+
+    const section = document.querySelector('section'); // Selecciona la sección con la clase "preview"
+    section.appendChild(para); // Agrega el párrafo al contenido de la sección
+</script>
+
+</body>
+</html>

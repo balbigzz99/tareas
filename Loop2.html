@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8"/>
+    <title>Loops: Task 2</title>
+    <style>
+        p {
+            color: purple; /* Establece el color del texto de los párrafos en púrpura */
+            margin: 0.5em 0; /* Establece el margen superior e inferior de los párrafos */
+        }
+
+        * {
+            box-sizing: border-box; /* Define el modelo de caja para todos los elementos */
+        }
+    </style>
+    <link rel="stylesheet" href="../styles.css" /> <!-- Importa una hoja de estilos externa -->
+</head>
+
+<body>
+
+<section class="preview">
+
+</section>
+
+<script>
+    const name = 'Mustafa'; // Nombre a buscar en el directorio telefónico
+    const para = document.createElement('p'); // Crea un nuevo elemento de párrafo
+
+    const phonebook = [ // Directorio telefónico con nombres y números de teléfono
+        { name: 'Chris', number: '1549' },
+        { name: 'Li Kang', number: '9634' },
+        { name: 'Anne', number: '9065' },
+        { name: 'Francesca', number: '3001' },
+        { name: 'Mustafa', number: '6888' },
+        { name: 'Tina', number: '4312' },
+        { name: 'Bert', number: '7780' },
+        { name: 'Jada', number: '2282' },
+    ];
+
+    // Bucle que recorre el directorio telefónico
+    for (let entry of phonebook) {
+        // Comprueba si el nombre actual coincide con el nombre buscado
+        if (entry.name === name) {
+            // Si se encuentra el nombre, establece el contenido de texto del párrafo con el nombre y número de teléfono correspondientes
+            para.textContent = `Name: ${entry.name}, Phone number: ${entry.number}`;
+            break; // Sale del bucle una vez que se encuentra el nombre
+        }
+    }
+
+    // Agrega el párrafo al elemento de sección en el documento HTML
+    const section = document.querySelector('section');
+    section.appendChild(para);
+</script>
+
+</body>
+</html>

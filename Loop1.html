@@ -1,0 +1,42 @@
+<!DOCTYPE html> <!-- Declaración del tipo de documento HTML -->
+<html lang="en-US"> <!-- Inicio del elemento HTML con atributo de idioma en inglés (Estados Unidos) -->
+<head>
+    <meta charset="utf-8"/> <!-- Configuración de la codificación de caracteres a UTF-8 -->
+    <title>Loops: Task 1</title> <!-- Título del documento -->
+    <style>
+        p {
+            color: purple; /* Establece el color del texto de los párrafos en púrpura */
+            margin: 0.5em 0; /* Establece el margen superior e inferior de los párrafos */
+        }
+
+        * {
+            box-sizing: border-box; /* Define el modelo de caja para todos los elementos */
+        }
+    </style>
+    <link rel="stylesheet" href="../styles.css" /> <!-- Importa una hoja de estilos externa -->
+</head>
+
+<body>
+
+<section class="preview"> <!-- Sección destinada a la vista previa -->
+
+</section>
+
+<script>
+    const myArray = ['tomatoes', 'chick peas', 'onions', 'rice', 'black beans']; // Array de elementos
+
+    const list = document.createElement('ul'); // Crea un elemento de lista desordenada (ul)
+
+    // Bucle que recorre el array y crea elementos de lista (li) para cada elemento
+    for (let item of myArray) {
+        const listItem = document.createElement('li'); // Crea un elemento de lista (li)
+        listItem.textContent = item; // Establece el contenido de texto del elemento de lista
+        list.appendChild(listItem); // Agrega el elemento de lista al elemento de lista desordenada
+    }
+
+    const section = document.querySelector('section'); // Selecciona la sección con la clase "preview"
+    section.appendChild(list); // Agrega la lista al contenido de la sección
+</script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html> <!-- Declaración del tipo de documento HTML -->
+<html lang="en-US"> <!-- Inicio del elemento HTML con atributo de idioma en inglés (Estados Unidos) -->
+  <head>
+    <meta charset="utf-8"/> <!-- Configuración de la codificación de caracteres a UTF-8 -->
+    <title>Events: Task 1</title> <!-- Título del documento -->
+    <style>
+      p {
+        color: purple; /* Establece el color del texto de los párrafos en púrpura */
+        margin: 0.5em 0; /* Establece el margen superior e inferior de los párrafos */
+      }
+
+      * {
+        box-sizing: border-box; /* Define el modelo de caja para todos los elementos */
+      }
+
+      button {
+        display: block; /* Muestra el botón como un bloque */
+        margin: 20px 0 20px 20px; /* Establece los márgenes del botón */
+      }
+    </style>
+    <link rel="stylesheet" href="../styles.css" /> <!-- Importa una hoja de estilos externa -->
+  </head>
+
+  <body>
+
+    <section class="preview">
+    </section>
+
+    <button class="off">Machine is off</button> <!-- Botón con clase "off" y texto predeterminado -->
+
+  <script>
+    const btn = document.querySelector('.off'); // Selecciona el botón con clase "off"
+
+    // Función para cambiar el texto del botón cuando se hace clic en él
+    btn.addEventListener('click', function() {
+      if (btn.textContent === 'Machine is off') { // Si el texto actual es "Machine is off"
+        btn.textContent = 'Machine is on'; // Cambia el texto a "Machine is on"
+      } else { // Si el texto actual es diferente de "Machine is off"
+        btn.textContent = 'Machine is off'; // Cambia el texto a "Machine is off"
+      }
+    });
+  </script>
+
+  </body>
+</html>

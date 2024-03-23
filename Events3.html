@@ -1,0 +1,52 @@
+<!DOCTYPE html> <!-- Declaración del tipo de documento HTML -->
+<html lang="en-US"> <!-- Inicio del elemento HTML con atributo de idioma en inglés (Estados Unidos) -->
+  <head>
+    <meta charset="utf-8"/> <!-- Configuración de la codificación de caracteres a UTF-8 -->
+    <title>Events: Task 3</title> <!-- Título del documento -->
+    <style>
+      p {
+        color: purple; /* Establece el color del texto de los párrafos en púrpura */
+        margin: 0.5em 0; /* Establece el margen superior e inferior de los párrafos */
+      }
+
+      * {
+        box-sizing: border-box; /* Define el modelo de caja para todos los elementos */
+      }
+
+      button {
+        display: block; /* Establece los botones como elementos de bloque */
+        margin: 20px 0 20px 20px; /* Establece el margen de los botones */
+      }
+
+      .button-bar {
+        padding: 20px 0; /* Establece el relleno del contenedor de botones */
+      }
+    </style>
+    <link rel="stylesheet" href="../styles.css" /> <!-- Importa una hoja de estilos externa -->
+  </head>
+
+  <body>
+
+    <section class="preview">
+    </section>
+
+    <div class="button-bar"> <!-- Contenedor de botones -->
+      <button data-color="red">Red</button> <!-- Botón con atributo data-color "red" -->
+      <button data-color="yellow">Yellow</button> <!-- Botón con atributo data-color "yellow" -->
+      <button data-color="green">Green</button> <!-- Botón con atributo data-color "green" -->
+      <button data-color="purple">Purple</button> <!-- Botón con atributo data-color "purple" -->
+    </div>
+
+  <script>
+    const buttonBar = document.querySelector('.button-bar'); // Selecciona el contenedor de botones
+
+    // Event listener para cambiar el color de fondo del contenedor al hacer clic en cualquier botón
+    buttonBar.addEventListener('click', function(event) {
+      if (event.target.tagName === 'BUTTON') { // Verifica que el elemento clicado sea un botón
+        const color = event.target.dataset.color; // Obtiene el valor del atributo data-color del botón clicado
+        buttonBar.style.backgroundColor = color; // Cambia el color de fondo del contenedor al valor obtenido
+      }
+    });
+  </script>
+  </body>
+</html>

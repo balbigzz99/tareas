@@ -1,0 +1,58 @@
+<!DOCTYPE html> <!-- Declaración del tipo de documento HTML -->
+<html lang="en-US"> <!-- Inicio del elemento HTML con atributo de idioma en inglés (Estados Unidos) -->
+<head>
+    <meta charset="utf-8"/> <!-- Configuración de la codificación de caracteres a UTF-8 -->
+    <title>Functions: Task 2</title> <!-- Título del documento -->
+    <style>
+        p {
+            color: purple; /* Establece el color del texto de los párrafos en púrpura */
+            margin: 0.5em 0; /* Establece el margen superior e inferior de los párrafos */
+        }
+
+        * {
+            box-sizing: border-box; /* Define el modelo de caja para todos los elementos */
+        }
+
+        canvas {
+            border: 1px solid black; /* Agrega un borde negro al lienzo */
+        }
+    </style>
+    <link rel="stylesheet" href="../styles.css" /> <!-- Importa una hoja de estilos externa -->
+</head>
+
+<body>
+
+<section class="preview">
+
+</section>
+
+<canvas id="myCanvas" width="480" height="320"> <!-- Crea un lienzo con un identificador único y dimensiones -->
+
+</canvas>
+
+<script>
+    const canvas = document.getElementById('myCanvas'); // Obtiene el elemento canvas por su id
+    const ctx = canvas.getContext('2d'); // Obtiene el contexto de dibujo 2D
+
+    const x = 50; // Coordenada x del rectángulo
+    const y = 60; // Coordenada y del rectángulo
+    const width = 100; // Ancho del rectángulo
+    const height = 75; // Altura del rectángulo
+    const color = 'blue'; // Color del rectángulo
+
+    // Función para dibujar un rectángulo en el lienzo
+    function drawRectangle(x, y, width, height, color) {
+        ctx.clearRect(0, 0, canvas.width, canvas.height); // Borra el contenido del lienzo
+        ctx.fillStyle = color; // Establece el color de relleno
+        ctx.fillRect(x, y, width, height); // Dibuja un rectángulo relleno en el lienzo
+    }
+
+    drawRectangle(x, y, width, height, color); // Llama a la función para dibujar el rectángulo
+
+    // Don't edit the code below here!
+
+    const section = document.querySelector('section'); // Selecciona la sección con la clase "preview"
+</script>
+
+</body>
+</html>
